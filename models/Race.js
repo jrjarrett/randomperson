@@ -2,15 +2,15 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var EthnicitySchema = new Schema({
+var RaceSchema = new Schema({
 	definition : { type: String, required:true, minlength :3, maxlength: 100 },
 });
 
-// Virtual for ethnicity's URL
-EthnicitySchema
+// Virtual for Race's URL
+RaceSchema
 .virtual('url')
 .get(function () {
-  return '/ethnicity/' + this._id;
+  return '/race/' + this._id;
 });
 
-module.exports = mongoose.model('Ethnicity', EthnicitySchema);
+module.exports = mongoose.model('Race', RaceSchema);
