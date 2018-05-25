@@ -41,8 +41,6 @@ describe('Creating Master Patient Records', function () {
     const r2 = new Race({definition: 'Native Hawaiian or Other Pacific Islander'})
     mpr.race.push(r2)
 
-    console.log(mpr)
-
     expect(mpr.race.length).to.equal(2)
     expect(mpr.race[0].definition).to.equal(mockPatient.race)
     expect(mpr.race[1].definition).to.equal('Native Hawaiian or Other Pacific Islander')

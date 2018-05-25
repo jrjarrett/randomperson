@@ -11,4 +11,9 @@
  *
  */
 const express = require('express');
-const router = express
+const router = express;
+const mpr_controller = require('../controllers/mprController')
+
+//
+/* GET request for list of all MasterPatientRecords. */
+router.get('/mpr', mpr_controller.mpr_list);
