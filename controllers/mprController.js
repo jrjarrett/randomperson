@@ -1,7 +1,7 @@
 const MasterPatientRecord = require('../models/MasterPatientRecord')
 
-// Display list of all Authors.
-exports.mpr_list = function (req, res) {
+// Display list of all patients.
+exports.mpr_list = function (req, res, next) {
   MasterPatientRecord.find()
     .populate('race')
     .exec(function (err, list_mprs) {
